@@ -1,0 +1,41 @@
+<html>
+Python code:
+despedida = input("Ingrese un mensaje de despedida para desplegarlo al finalizar el programa: ")
+a = int(input("Ingrese la longitud de la lista: "))
+lista = []
+while a - 1 >= 0:
+    valor = int(input("Ingrese un valor numerico: "))
+    lista.append(valor)
+    a -= 1
+for num in lista:
+    if num < 0:
+        print(f'{num} es un numero negativo')
+    elif num > 0:
+        print(f'{num} es un numero positivo')
+    else:
+        print(f'{num} es igual a 0')
+add = int(input("Ingrese el numero de valores que quiere agregar a la lista: "))
+for i in range(add):
+    floa = float(input("Ingrese un valor flotante para rellenar la lista: "))
+    lista.append(floa)
+opcion = input("Ingrese \"si\" o \"no\" dependiendo si es que desea continuar con el programa: ")
+opcion = opcion[0]
+if opcion == 's'  and (not(len(lista) <= 6)):
+    print("A continuacion, se realizaran distintos ejemplos utilizando los operadores disponibles: ")
+    print(lista[0] * 0)
+    print(lista[1] / 1)
+    print(lista[2] + 2)
+    print(lista[3] % 3)
+    print(lista[4] // 4)
+    print(lista[5] ** 5)
+elif opcion == 's' or len(lista) > 3:
+    print("En caso de haber escogido si, es posible que tu lista no contaba con las condicionaes necesarias para realizar la tarea anterior: ")
+    print("Se realizaran algunos casos mas antes de terminar el programa")
+    lista[0] += 1
+    lista[1] -= 2
+    lista[2] *= 3
+    lista[3] /= 4
+if opcion != 'n':
+    print("Se cumplieron las funciones de los operadores basicos")
+print(despedida)
+</html>
